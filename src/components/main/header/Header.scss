@@ -1,0 +1,125 @@
+.Header {
+    background-color: black;
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    &__main-image {
+        background-image: url('./headfoto.jpeg');
+        width: 30%;
+        height: 75%;
+        right: 10%;
+        top: 12%;
+        position: absolute;
+    }
+
+    aside {
+        height: 100%;
+        width: 3%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, grey, rgb(35, 31, 31));
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+
+        strong:nth-child(1) {
+            text-transform: uppercase;
+            color: gold;
+            font-family: 'Arima', Arial, Helvetica, sans-serif;
+            border-right: 3px solid grey;
+            padding-right: 10px;
+            border-radius: 1% 1%;
+        }
+
+        strong:nth-child(2) {
+            text-transform: uppercase;
+            color: white;
+            font-family: 'Arima', Arial, Helvetica, sans-serif;
+            margin-left: 10px;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        color: white;
+        left: 20%;
+        top: 25%;
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+        display: block;
+        width: 35%;
+        line-height: 60px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+
+    &__gold {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        bottom: 10%;
+        left: 3%;
+        border-top: 5px solid rgb(207, 177, 10);
+        border-right: 5px solid rgb(207, 177, 10);
+        border-bottom: 5px solid rgb(207, 177, 10);
+    }
+
+    &__white {
+        position: absolute;
+        bottom: 20%;
+        left: 8%;
+        width: 7%;
+        height: 5px;
+        background-color: white;
+    }
+
+    h3 {
+        position: absolute;
+        color: white;
+        font-family: 'Arima', Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        bottom: 12%;
+        left: 17%;
+        background-color: black;
+
+        strong {
+            color: rgb(207, 177, 10);
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        right: 3%;
+
+        li {
+            margin: 0 10px;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            height: 100%;
+            letter-spacing: 2px;
+            transition: 0.3s;
+
+            &:hover {
+                color: rgb(207, 177, 10);
+            }
+        }
+    }
+
+}

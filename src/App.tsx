@@ -1,9 +1,12 @@
 import React from 'react';
+import Main from './views/main/Main';
+
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      start
+      <Main />
     </div>
   );
 }
