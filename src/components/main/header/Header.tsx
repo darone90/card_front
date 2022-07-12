@@ -1,8 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './Header.scss';
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="Header">
             <div className="Header__main-image"></div>
@@ -19,7 +23,7 @@ const Header = () => {
             <div className="Header__white"></div>
             <h3>wystarczy trochę <strong>pomyśleć</strong></h3>
             <ul className="Header__menu">
-                <li><a href="">O mnie</a></li>
+                <li onClick={() => navigate('/about')}><a>O mnie</a></li>
                 <li><a href="">Programowanie</a></li>
                 <li><a href="">Automatyka</a></li>
                 <li><a href="">Spawalnictwo</a></li>
