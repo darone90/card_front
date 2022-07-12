@@ -6,7 +6,10 @@ const Header = () => {
     return (
         <div className="Header">
             <div className="Header__main-image"></div>
-            <aside></aside>
+            <aside>
+                <a href="https://github.com/darone90/" className="Header__github"></a>
+                <strong>Checkout my</strong>
+            </aside>
             <div className="Header__logo">
                 <strong>techniczny</strong>
                 <strong>pl</strong>
