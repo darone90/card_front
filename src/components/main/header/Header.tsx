@@ -24,8 +24,8 @@ const Header = () => {
             <h3>wystarczy trochę <strong>pomyśleć</strong></h3>
             <ul className="Header__menu">
                 <li onClick={() => navigate('/about')}><a>O mnie</a></li>
-                <li><a href="">Programowanie</a></li>
-                <li><a href="">Automatyka</a></li>
+                <li><a onClick={() => navigate('/programming')}>Programowanie</a></li>
+                <li><a onClick={() => navigate('/automation')}>Automatyka</a></li>
                 <li><a href="">Spawalnictwo</a></li>
                 <li><a href="">Hutnictwo</a></li>
             </ul>

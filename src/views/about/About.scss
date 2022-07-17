@@ -2,7 +2,6 @@ html {
     width: 100%;
     height: 100%;
 }
-
 body {
     height: 100%;
     width: 100%;
@@ -11,7 +10,81 @@ body {
 }
 
 .About {
-    h1 {
+    position: relative;
+    
+    
+        &__menu {
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            top: -18px;
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            font-family: 'Raleway', Arial, Helvetica, sans-serif;
+            background-color: black;
+            z-index: 20;
+    
+            li {
+                margin: 0 10px;
+    
+                &:nth-child(1) {
+                    margin-right: 30%;
+                }
+            }
+    
+            a {
+                display: block;
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                width: 100%;
+                height: 100%;
+                letter-spacing: 2px;
+                transition: 0.3s;
+                padding-top: 12px;
+    
+                &:hover {
+                    color: rgb(207, 177, 10);
+                }
+            }
+        }
+    
+        &__foto {
+            position: absolute;
+            top: 150px;
+            right: 15%;
+            width: 15%;
+            height: auto;
+    
+            img {
+                width: 100%;
+            }
+        }
+    
+        p {
+            color: white;
+            padding: 20px;
+            line-height: 2;
+            letter-spacing: 2px;
+            font-family: 'Raleway', Arial, Helvetica, sans-serif;
+            text-align: justify;
+            margin-left: 10%;
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+            box-shadow: -5px 5px 15px white;
+    
+        }
+    
+        article {
+            width: 60%;
+        }
+    
+        article:nth-child(even) {
+            margin-left: 30%;
+        }
+    
+        h2 {
         margin-top: 8%;
         color: white;
         font-family: 'Raleway', Arial, Helvetica, sans-serif;
