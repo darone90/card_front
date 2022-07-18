@@ -1,5 +1,12 @@
 .Automation {
-    color: white;
+    position: relative;
+    
+        &__projects {
+            padding: 5%;
+            background-image: url('./automatyka.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
     a {
         display: block;
@@ -17,4 +24,28 @@
             color: rgb(207, 177, 10);
         }
     }
+p {
+    position: relative;
+    color: white;
+    padding: 20px;
+    line-height: 2;
+    letter-spacing: 2px;
+    width: 70%;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 10%;
+}
+
+h1 {
+    margin-top: 8%;
+    color: white;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    padding-left: 5%;
+    font-size: 45px;
+
+    strong {
+        color: rgb(207, 177, 10);
+    }
+}
 }

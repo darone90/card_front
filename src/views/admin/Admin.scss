@@ -1,0 +1,47 @@
+.Admin {
+    color: white;
+    position: relative;
+    height: 100vh;
+
+    &__main {
+        border: 2px solid white;
+        width: 80%;
+        padding: 1%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__menu {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        left: 3%;
+
+        li:nth-child(1) {
+            margin-right: 90%;
+        }
+
+        li {
+            margin: 0 10px;
+        }
+
+        a {
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            height: 100%;
+            letter-spacing: 2px;
+            transition: 0.3s;
+
+            &:hover {
+                color: rgb(207, 177, 10);
+            }
+        }
+    }
+}

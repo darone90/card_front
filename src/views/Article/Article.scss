@@ -1,0 +1,47 @@
+.Article {
+    position: relative;
+
+    .Gallery {
+        position: absolute;
+        right: 8%;
+        top: 15%;
+    }
+
+    a {
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        height: 100%;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        padding-top: 12px;
+        margin-left: 30px;
+
+        &:hover {
+            color: rgb(207, 177, 10);
+        }
+    }
+
+    p {
+        position: relative;
+        color: white;
+        padding: 20px;
+        line-height: 2;
+        letter-spacing: 2px;
+        width: 35%;
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        text-align: justify;
+        margin-left: 10%;
+    }
+
+    h1 {
+        margin-top: 8%;
+        color: rgb(207, 177, 10);
+        font-family: 'Raleway', Arial, Helvetica, sans-serif;
+        letter-spacing: 3px;
+        padding-left: 5%;
+        font-size: 45px;
+    }
+}

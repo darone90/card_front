@@ -1,0 +1,23 @@
+.Form {
+    color: white;
+
+    &__place {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            width: 48%;
+            border-right: 2px solid white;
+            align-items: center;
+        }
+
+        &-files {
+            width: 48%;
+            padding: 20px;
+        }
+    }
+}

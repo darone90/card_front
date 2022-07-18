@@ -24,8 +24,6 @@ const Programming = () => {
                 mój priorytet: Połączenie rozrywki, pasji, oraz kariery zawodowej.
             </p>
 
-            <h2>Projekty</h2>
-
             <div className="Programming__projects">
                 <Project />
                 <Project />
