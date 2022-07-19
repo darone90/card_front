@@ -12,7 +12,14 @@ const Form = () => {
                     <label htmlFor='title'>tytuł</label>
                     <input type="text" name='title' />
                     <label htmlFor='text'>Treść:</label>
-                    <textarea name="text" cols={70} rows={30}></textarea>
+                    <textarea name="text" cols={70} rows={20}></textarea>
+                    <label htmlFor="type">Typ ogłoszenia</label>
+                    <select name="type">
+                        <option value="programming">Programowanie</option>
+                        <option value="automation">Automatyka</option>
+                        <option value="welding">Spawalnictwo</option>
+                        <option value="glass">Hutnictwo</option>
+                    </select>
                 </div>
                 <div className="Form__place-files">
                     <label>

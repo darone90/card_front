@@ -1,0 +1,20 @@
+.User {
+    width: 35%;
+    border: 2px solid white;
+    padding: 15px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            position: relative;
+            margin: 10px 2px;
+
+            input {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
