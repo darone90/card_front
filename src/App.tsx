@@ -10,6 +10,7 @@ import GlassPlant from './views/glassplant/GlassPlants';
 import Article from './views/Article/Article';
 import Login from './views/login/Login';
 import Admin from './views/admin/Admin';
+import Error from './views/error/Error';
 
 import './App.scss';
 
@@ -24,9 +25,8 @@ function App() {
         <Route path='/glassplant' element={<GlassPlant />} />
         <Route path='/article/:id' element={<Article />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/admin/*' element={<Admin />} >
-
-        </Route>
+        <Route path='/error/:message' element={<Error />} />
+        <Route path='/admin/*' element={<Admin />} ></Route>
         <Route path='*' element={<Main />} />
       </Routes>
     </div>
