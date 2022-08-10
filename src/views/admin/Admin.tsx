@@ -18,7 +18,7 @@ const Admin = () => {
     const logout = async () => {
         setLoading(true);
 
-        const response = await getter('login/out');
+        const response = await getter('login');
 
         setLoading(false);
 

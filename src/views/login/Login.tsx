@@ -27,7 +27,7 @@ const Login = () => {
 
     const login = async () => {
 
-        setInfo('');
+        setInfo(''); 
         setLoading(true);
 
         const response = await sendData(data, 'login', ConnectionType.A);

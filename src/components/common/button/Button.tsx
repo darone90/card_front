@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { MouseEvent } from 'react';
 
 import './Button.scss';
 
 interface Props {
     name: string;
-    func?: () => void;
+    func?: (event: MouseEvent<HTMLElement>) => void | Promise<void>;
     className: string
 }
 

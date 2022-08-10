@@ -33,3 +33,20 @@ export const getter = async (path: string): Promise<incomingData | Error> => {
         return err as Error;
     }
 };
+
+export const sendMultipart = async (data: FormData, path: string, method: ConnectionType): Promise<incomingData | Error> => {
+    try {
+        const request = await fetch(`${ConnectionsConfig.backendPath}/${path}`, {
+            method: method,
+            credentials: "include",
+            body: data
+        });
+
+        const response = await request.json() as incomingData;
+        return response;
+
+    } catch (err) {
+        console.log(err);
+        return err as Error;
+    }
+}
