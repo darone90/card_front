@@ -1,11 +1,11 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ConnectionType, LoginData } from '../../types/user-types';
 
 import Button from '../../components/common/button/Button';
 
 import './Login.scss';
-import { sendData } from '../../global/connection';
+import { getter, sendData } from '../../global/connection';
 import Spinner from '../../components/common/spinner/Spinner';
 
 
@@ -25,6 +25,22 @@ const Login = () => {
         setData(prev => ({ ...prev, [e.target.name]: e.target.value }))
     }
 
+    const loginCheck = async () => {
+        setLoading(true);
+        const response = await getter('login/check');
+        setLoading(false);
+        if (response instanceof Error) {
+            navigate(`/error/${response.message}`);
+        } else {
+            if (response.actionStatus === true) {
+                navigate('/admin/add')
+            } else {
+                return;
+            }
+        }
+    };
+
+
     const login = async () => {
 
         setInfo(''); 
@@ -37,9 +53,15 @@ const Login = () => {
         if (response instanceof Error) {
             navigate(`/error/${response.message}`);
         } else {
-            response.actionStatus === true ? navigate('/admin/add') : setInfo(response.message);
+            response.actionStatus === true ? navigate('/admin/add') : setInfo(response.message as string);
         };
     };
+
+    useEffect(() => {
+        (async () => {
+            await loginCheck();
+        })()
+    }, [])
 
     if (loading) return <Spinner />;
 

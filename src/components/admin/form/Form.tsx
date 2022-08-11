@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState, MouseEvent } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { sendMultipart } from '../../../global/connection';
 import { articleDataValidation } from '../../../global/validation';
@@ -22,6 +23,7 @@ const initialState = {
 const Form = () => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [files, setFiles] = useState<FileList | null>(null);
 
@@ -66,13 +68,18 @@ const Form = () => {
             if (response instanceof Error) {
                 navigate(`/error/${response.message}`);
             } else {
-                setInfo(response.message);
-                setArtData(initialState);
-                setFiles(null);
-            }
-        } else {
-            return;
-        };
+                if (response.actionStatus === true) {
+                    setInfo(response.message as string);
+                    setArtData(initialState);
+                    setFiles(null);
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 2000);
+                } else {
+                    setInfo(response.message as string);
+                };
+            };
+        } else return;
     };
 
     const addedFile = files ? [...files].map((file, index) => <FileInfo name={file.name} size={file.size} key={index} />) : null;
