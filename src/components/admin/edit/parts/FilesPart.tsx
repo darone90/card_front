@@ -4,6 +4,7 @@ import { sendMultipart } from "../../../../global/connection";
 import { Fotos } from "../../../../types/article-types";
 import { ConnectionType } from "../../../../types/user-types";
 import Button from "../../../common/button/Button";
+import Spinner from "../../../common/spinner/Spinner";
 import Foto from "./Foto";
 
 interface Props {
@@ -18,8 +19,9 @@ const FilesPart = (props: Props) => {
     const { fotos, id } = props;
 
     const [file, setFile] = useState<File | null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
 
-    const fotoToShow = fotos.map((foto, index) => <Foto id={foto.id} orginalName={foto.orginalName} />);
+    const fotoToShow = fotos.map((foto, index) => <Foto id={foto.id} orginalName={foto.orginalName} key={index} />);
     const calculation = 6 - fotoToShow.length;
 
     const fileHandler = (event: ChangeEvent<HTMLInputElement>): void => {
@@ -39,7 +41,7 @@ const FilesPart = (props: Props) => {
             const formData = new FormData();
             formData.append('file', file);
             formData.append('id', id);
-
+            setLoading(true)
             const response = await sendMultipart(formData, 'user/foto/add', ConnectionType.A);
 
             if (response instanceof Error) {
@@ -50,6 +52,7 @@ const FilesPart = (props: Props) => {
                 } else {
                     setFile(null);
                     setTimeout(() => {
+                        setLoading(false)
                         window.location.reload()
                     }, 2000)
                 }
@@ -63,6 +66,8 @@ const FilesPart = (props: Props) => {
         <input type="file" name="foto" onChange={fileHandler} />
         <Button name="Dodaj" className="satndard" func={addFoto} />
     </>
+
+    if (loading) return <Spinner />
 
     return (
         <div className="Fileshandler">

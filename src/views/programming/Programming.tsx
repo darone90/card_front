@@ -1,13 +1,23 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import Project from '../../components/programming/modal/Project';
+import { RootState } from '../../store';
 
 import './Programming.scss';
 
 const Programming = () => {
 
     const navigate = useNavigate();
+
+    const { article } = useSelector((store: RootState) => store.article);
+
+    const programmingArticle = article.filter(art => art.section === "programming");
+
+    const modalList = programmingArticle.map((art, index) => <Project article={art} key={index} />);
+
+
 
     return (
         <div className="Programming">
@@ -25,8 +35,7 @@ const Programming = () => {
             </p>
 
             <div className="Programming__projects">
-                <Project />
-                <Project />
+                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList}
             </div>
 
 

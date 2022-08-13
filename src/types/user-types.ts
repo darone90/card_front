@@ -1,4 +1,5 @@
 import { ArticleListData } from "./article-types";
+import { ErrorLog } from "./errrolog-types";
 
 export interface LoginData {
     login: string;
@@ -7,7 +8,7 @@ export interface LoginData {
 
 export interface incomingData {
     actionStatus: boolean;
-    message: string | ArticleListData[] | ArticleListData;
+    message: string | ArticleListData[] | ArticleListData | ErrorLog[];
 };
 
 export enum ConnectionType {

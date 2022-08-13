@@ -6,6 +6,7 @@ import { ArticleData, ArticleListData } from '../../../types/article-types';
 import { ConnectionType } from '../../../types/user-types';
 import Button from '../../common/button/Button';
 import Spinner from '../../common/spinner/Spinner';
+import FilesPart from './parts/FilesPart';
 
 const initialState: ArticleListData = {
     title: "",
@@ -74,7 +75,7 @@ const Edit = () => {
         };
 
         setLoading(true);
-        const response = await sendData(dataToSend, 'user/article/patch', ConnectionType.A);
+        const response = await sendData(dataToSend, 'user/article/patch', ConnectionType.U);
         setLoading(false);
 
         if (response instanceof Error) {
@@ -121,12 +122,12 @@ const Edit = () => {
                             <option value="glass">Hutnictwo</option>
                         </select>
                     </div>
-                    <Button name='Zapisz zmiany' className='standard' func={formSubmit} />
+                    <div className="Edit__file">
+                        <FilesPart fotos={article.fotos} id={article.id} />
+                    </div>
                 </form>
             </div>
-            <div className="Edit__file">
-                osobny komponent
-            </div>
+            <Button name='Zapisz zmiany' className='standard' func={formSubmit} />           
         </div>
     );
 };

@@ -1,7 +1,7 @@
 import fileDownload from 'js-file-download';
 import React, { MouseEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getter } from '../../../../global/connection';
+import { getFotoForShow, getter } from '../../../../global/connection';
 import Button from '../../../common/button/Button';
 
 interface Props {
@@ -19,24 +19,27 @@ const Foto = (props: Props) => {
 
     const showFoto = async () => {
 
-        try {
-            const res = await getter(`user/sendfoto/${id}/mini`) as unknown as Response;
-            const blob = await res.blob();
-            const objectURL = URL.createObjectURL(blob);
-            setImg(objectURL);
-        } catch (err) {
-            navigate(`/error/${(err as Error).message}`)
-        }
-    }
+        if (id) {
+            const res = await getFotoForShow(`user/sendfoto/${id}/mini`);
+            if (res instanceof Error) {
+                navigate(`/error/${res.message}`);
+            } else {
+                const blob = await res.blob();
+                const objectURL = URL.createObjectURL(blob);
+                setImg(objectURL);
+            };
+        } else return;
+    };
 
     const downloadFoto = async (event: MouseEvent<HTMLElement>) => {
         event.preventDefault();
-        try {
-            const res = await getter(`user/sendfoto/${id}/normal`) as unknown as Response;
+
+        const res = await getFotoForShow(`user/sendfoto/${id}/normal`);
+        if (res instanceof Error) {
+            navigate(`/error/${res.message}`)
+        } else {
             const blob = await res.blob();
             fileDownload(blob, orginalName);
-        } catch (err) {
-            navigate(`/error/${(err as Error).message}`)
         };
     };
 

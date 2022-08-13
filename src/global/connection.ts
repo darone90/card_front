@@ -31,7 +31,7 @@ export const getter = async (path: string): Promise<incomingData | Error> => {
     } catch (err) {
         console.log(err);
         return err as Error;
-    }
+    };
 };
 
 export const sendMultipart = async (data: FormData, path: string, method: ConnectionType): Promise<incomingData | Error> => {
@@ -48,5 +48,19 @@ export const sendMultipart = async (data: FormData, path: string, method: Connec
     } catch (err) {
         console.log(err);
         return err as Error;
-    }
+    };
+};
+
+export const getFotoForShow = async (path: string): Promise<Response | Error> => {
+    try {
+        const request = await fetch(`${ConnectionsConfig.backendPath}/${path}`, {
+            method: "GET",
+            credentials: "include"
+        });
+        return request;
+    } catch (err) {
+        console.log(err);
+        return err as Error;
+    };
 }
+
