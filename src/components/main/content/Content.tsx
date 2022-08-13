@@ -1,11 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { RootState } from '../../../store';
 
-import Modal from './modal/Modal';
+
 
 import './Content.scss';
+import Modal from './modal/Modal';
 
 const Content = () => {
+
+    const { article } = useSelector((store: RootState) => store.article);
 
     const navigate = useNavigate();
 
@@ -17,8 +22,8 @@ const Content = () => {
             </aside>
             <h3>Ostatnie  projekty</h3>
             <div className="Content__modal-space">
-                <Modal />
-                <Modal />
+                <Modal article={article[0]} />
+                <Modal article={article[1]} />
             </div>
         </div>
     );

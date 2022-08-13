@@ -11,6 +11,8 @@ interface Props {
 
 const Project = (props: Props) => {
 
+    console.log(props)
+
     const navigate = useNavigate();
 
     const { text, title, date, fotos, id } = props.article;
@@ -47,7 +49,7 @@ const Project = (props: Props) => {
                 <div className="Project__modal-container-modal">
                     <h1 className='title'>{title}<strong>{date}</strong></h1>
                     <p className='text'>
-                        <img src={foto} alt="foto" className='Project__modal-container-foto' />
+                        {foto.length < 1 ? null : <img src={foto} alt="foto" className='Project__modal-container-foto' />}
                         {shortText}
                     </p>
                     <button onClick={goToArticle}>Czytaj więcej</button>
