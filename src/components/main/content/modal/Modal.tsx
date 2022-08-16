@@ -20,7 +20,7 @@ const Modal = (props: Props) => {
     const shortText = (text as string).length > 200 ? (text as string).substring(0, 200) : text;
 
     const getFoto = async () => {
-
+        if (!fotos[0]) return;
         const res = await getFotoForShow(`user/sendfoto/${fotos[0].id}/mini`);
         if (res instanceof Error) {
             navigate(`/error/${res.message}`);

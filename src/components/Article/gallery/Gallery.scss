@@ -3,21 +3,30 @@
     font-size: 1rem;
     line-height: 1.25;
     background-color: black;
-    width: 30%;
+    width: 80%;
     max-width: 60rem;
-
     display: flex;
-    box-orient: horizontal;
-    box-direction: normal;
-    flex-direction: row;
-    flex-wrap: wrap;
-    transform: rotateX(30deg) rotateZ(30deg);
-    perspective: 1000px;
+
+    @media (min-width: 769px) {
+        box-orient: horizontal;
+        box-direction: normal;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transform: rotateX(30deg) rotateZ(30deg);
+        perspective: 1000px;
+        width: 30%;
+    }
+    
 
     &__block {
         width: 50%;
         min-height: 11.25rem;
         padding: 1rem;
+
+        @media (max-width: 768px) {
+            padding: 0.1rem;
+            
+        }
 
         &-link {
             display: block;
@@ -37,6 +46,11 @@
                     box-shadow: 5px 5px rgba(244, 170, 200, 0.4),
                         10px 10px rgba(244, 170, 200, 0.3), 15px 15px rgba(244, 170, 200, 0.2),
                         20px 20px rgba(244, 170, 200, 0.1), 25px 25px rgba(244, 170, 200, 0.05);
+
+                        @media (max-width: 768px) {
+                            top: -0.3rem;
+                            left: -0.3rem;
+                        }
                 }
             }
 

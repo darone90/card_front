@@ -2,6 +2,9 @@ import React, { MouseEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getFotoForShow } from '../../../../global/connection';
 
+import './Popup.scss';
+
+
 interface Props {
     fotoId: string;
     func: (event: MouseEvent<HTMLElement>) => void;

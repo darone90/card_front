@@ -77,7 +77,7 @@ const Article = () => {
             <p>
                 {article.text}
             </p>
-            <Gallery fotos={article.fotos} popupCall={activatePopup} />
+            {article.fotos.length > 0 ? <Gallery fotos={article.fotos} popupCall={activatePopup} /> : null} 
         </div>
     );
 };

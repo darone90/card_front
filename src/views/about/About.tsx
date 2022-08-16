@@ -47,7 +47,7 @@ const About = () => {
             <article ref={work}>
                 <h2>Zawodowo...</h2>
                 <p>
-                    Od 8 lat zawodowo param się przemysłem ciężkim, a dokładniej jestem hutnikiem szkalrskim. Zagłębiając się jeszcze trochę w temat
+                    Od 8 lat zawodowo param się przemysłem ciężkim, a dokładniej jestem hutnikiem szklarskim. Zagłębiając się jeszcze trochę w temat
                     zajmuję się instalacjami opalania, chłodzenia, pneumatyką, oraz rozruchami (czyli też rozgrzewami) pieców szklarskich.
                     Dużo hałasu, ciężkiego sprzętu, ludzi, procesów, instalacji... to właśnie moje środowisko. Ale radość z pierwszego szkła... Kto
                     nie przeżył, nie zrozumie. Swoje życie zawodowe realizuję na całym świecie. Pracujemy od Indii przez Arabię Saudyjską, Egipt, Turcję

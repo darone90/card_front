@@ -11,7 +11,9 @@ import { getter } from '../../global/connection';
 import './Admin.scss';
 import { useDispatch } from 'react-redux';
 import { loadAll } from '../../features/errorlog-slice';
+import { loadAll as loadAllArticle } from '../../features/article-slice';
 import { ErrorLog } from '../../types/errrolog-types';
+import { ArticleListData } from '../../types/article-types';
 
 const Admin = () => {
 
@@ -60,11 +62,27 @@ const Admin = () => {
         };
     };
 
+    const loadArticleList = async () => {
+        setLoading(true);
+        const response = await getter('user/list');
+        setLoading(false);
+        if (response instanceof Error) {
+            navigate(`/error/${response.message}`);
+        } else {
+            if (response.actionStatus === true && typeof response.message !== 'string') {
+                dispatch(loadAllArticle(response.message as ArticleListData[]))
+            } else {
+                navigate(`/error/${response.message}`)
+            };
+        };
+    };
+
     useEffect(() => {
         (async () => {
             setLoading(true);
             await loginCheck();
             await getErrorLog();
+            await loadArticleList();
             setLoading(false);
         })()
     }, [])

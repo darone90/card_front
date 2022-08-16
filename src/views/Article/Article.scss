@@ -1,10 +1,14 @@
 .Article {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     .Gallery {
-        position: absolute;
-        right: 8%;
-        top: 15%;
+        margin-left: 50%;
+        @media (max-width: 768px) {
+            margin-left: 3%;
+            
+        }
     }
 
     a {
@@ -43,5 +47,11 @@
         letter-spacing: 3px;
         padding-left: 5%;
         font-size: 45px;
+
+        @media (max-width: 768px) {
+            font-size: 20px;
+            letter-spacing: 2px;
+
+        }
     }
 }

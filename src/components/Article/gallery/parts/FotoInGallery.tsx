@@ -16,7 +16,7 @@ const FotoInGallery = (props: Props) => {
     const [foto, setFoto] = useState<string>('')
 
     const getFoto = async () => {
-
+        if (!fotoId) return;
         const res = await getFotoForShow(`user/sendfoto/${fotoId}/mini`);
         if (res instanceof Error) {
             navigate(`/error/${res.message}`);

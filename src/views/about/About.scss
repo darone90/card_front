@@ -24,12 +24,24 @@ body {
             font-family: 'Raleway', Arial, Helvetica, sans-serif;
             background-color: black;
             z-index: 20;
+
+            @media (max-width: 768px) {
+                flex-wrap: wrap;
+                left: -5%;
+            }
+            
+            @media (max-width: 440px) {
+
+                left: -10%;
+            }
     
             li {
                 margin: 0 10px;
     
                 &:nth-child(1) {
-                    margin-right: 30%;
+                    @media (min-width: 1024px) {
+                        margin-right: 30%;
+                    }                   
                 }
             }
     
@@ -43,6 +55,15 @@ body {
                 letter-spacing: 2px;
                 transition: 0.3s;
                 padding-top: 12px;
+
+                @media (max-width: 1024px) {
+                    letter-spacing: 1px;
+                    font-size: 0.6rem;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 0.4rem;
+                }
     
                 &:hover {
                     color: rgb(207, 177, 10);
@@ -56,6 +77,15 @@ body {
             right: 15%;
             width: 15%;
             height: auto;
+
+            @media (max-width: 1024px) {
+                right: 4%;
+                width: 20%;
+            }
+
+            @media (max-width: 768px) {
+                display: none;
+            }
     
             img {
                 width: 100%;
@@ -73,15 +103,37 @@ body {
             border-bottom: 2px solid white;
             border-left: 2px solid white;
             box-shadow: -5px 5px 15px white;
+
+            @media (max-width: 768px) {
+                line-height: 1.1;
+                letter-spacing: 1px;
+                font-size: 0.5rem;
+                
+            }
     
         }
     
         article {
             width: 60%;
+
+            @media (max-width: 1024px) {
+                width: 70%;
+                margin-top: 80px;
+            }
+
+            @media (max-width: 768px) {
+                width: 95%;
+            }
         }
     
         article:nth-child(even) {
-            margin-left: 30%;
+            @media (min-width: 1024px) {
+                margin-left: 30%;
+            }
+
+            @media (min-width: 769px) {
+                margin-left: 22%;
+            }
         }
     
         h2 {
@@ -91,6 +143,11 @@ body {
         letter-spacing: 3px;
         padding-left: 5%;
         font-size: 45px;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
 
         strong {
             color: rgb(207, 177, 10);

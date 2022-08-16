@@ -11,8 +11,6 @@ interface Props {
 
 const Project = (props: Props) => {
 
-    console.log(props)
-
     const navigate = useNavigate();
 
     const { text, title, date, fotos, id } = props.article;
@@ -26,7 +24,7 @@ const Project = (props: Props) => {
     const [foto, setFoto] = useState<string>('');
 
     const getFoto = async () => {
-
+        if (!fotos[0]) return;
         const res = await getFotoForShow(`user/sendfoto/${fotos[0].id}/mini`);
         if (res instanceof Error) {
             navigate(`/error/${res.message}`);

@@ -13,9 +13,9 @@ const Welding = () => {
 
     const { article } = useSelector((store: RootState) => store.article);
 
-    const programmingArticle = article.filter(art => art.section === "welding");
+    const weldingArticle = article.length < 1 ? [] : article.filter(art => art.section === "welding");
 
-    const modalList = programmingArticle.map((art, index) => <Project article={art} key={index} />);
+    const modalList = weldingArticle.length < 1 ? null : weldingArticle.map((art, index) => <Project article={art} key={index} />);
 
     return (
         <div className="Welding">
@@ -30,7 +30,7 @@ const Welding = () => {
                 spawarki TIG i opanowanie tej metody.
             </p>
             <div className="Welding__projects">
-                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList}
+                {modalList ? modalList : "Brak artykułów w tej kategorii"}
             </div>
         </div>
     );

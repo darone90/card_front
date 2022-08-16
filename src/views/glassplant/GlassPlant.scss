@@ -39,6 +39,15 @@
         font-family: 'Raleway', Arial, Helvetica, sans-serif;
         text-align: justify;
         margin-left: 10%;
+
+        @media (max-width: 768px) {
+            width: 90%;
+            margin-left: 0;
+            line-height: 1.1;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            
+        }
     }
 
     h1 {
@@ -48,6 +57,11 @@
         letter-spacing: 3px;
         padding-left: 5%;
         font-size: 45px;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
 
         strong {
             color: rgb(207, 177, 10);
