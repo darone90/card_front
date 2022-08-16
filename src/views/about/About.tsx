@@ -14,6 +14,7 @@ const About = () => {
     const feature = useRef(null);
     const programming = useRef(null);
     const summary = useRef(null);
+    const contact = useRef(null);
 
 
     return (
@@ -26,6 +27,8 @@ const About = () => {
                 <li><a onClick={() => (programming as unknown as MutableRefObject<HTMLElement>).current.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Programowanie?</a></li>
                 <li><a onClick={() => (summary as unknown as MutableRefObject<HTMLElement>).current.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Podsumowanie</a></li>
                 <li><a onClick={() => (interestedIn as unknown as MutableRefObject<HTMLElement>).current.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Zainteresowania</a></li>
+                <li><a onClick={() => (contact as unknown as MutableRefObject<HTMLElement>).current.scrollIntoView({ behavior: 'smooth', block: 'end' })}>Kontakt</a></li>
+
             </ul>
             <div className="About__foto">
                 <img src={foto} alt="Moje zdjęcie" />
@@ -35,9 +38,9 @@ const About = () => {
                 <p>Inżynier z powołania. Uwielbiam gdy coś działa, ale najwięcej satysfakcji mam gdy działa po dobrej
                     przeprawie z wszystkimi co działać nie chce. Zasada jest prosta: nie odpuszczać aż się uda. Nie lubię przerostu teori
                     nad działaniami (czyli dużo gadać, mało robić), chyba dlatego swoją przygodę z uczelnią zakończyłem na etapie tytułu inżyniera. Głowę muszę mieć cały
-                    czas czymś zajętą stąd cierpię na chroniczny brak czasu. Jeśli w coś wchodzę to na całego. Wymyślanie koła od nowa to moje hobby,
+                    czas czymś zajętą, stąd cierpię na chroniczny brak czasu. Jeśli w coś wchodzę to na całego. Wymyślanie koła od nowa to moje hobby,
                     ale zazwyczaj mam na nie czas dopiero po godzinach pracy. W robocie lubię na skróty. Lubię wiedzieć, jak nie wiem to pytam, dlatego fajnie
-                    jak jest ktoś kto odpowie, podpowie itp. (bardzo cenie pracę w gronie lepszych od siebie i możliwości rozwoju). Raz na kilka
+                    jak jest ktoś kto odpowie, podpowie itp. (bardzo cenię pracę w gronie lepszych od siebie i możliwości rozwoju). Raz na kilka
                     lat dobrze wywalić swoją karierę zawodową więc...
                 </p>
             </article>
@@ -46,8 +49,8 @@ const About = () => {
                 <p>
                     Od 8 lat zawodowo param się przemysłem ciężkim, a dokładniej jestem hutnikiem szkalrskim. Zagłębiając się jeszcze trochę w temat
                     zajmuję się instalacjami opalania, chłodzenia, pneumatyką, oraz rozruchami (czyli też rozgrzewami) pieców szklarskich.
-                    Dużo hałasu, cięzkiego sprzętu, ludzi, procesów, instalacji... to właśnie moje środowisko. Ale radość z pierwszego szkła... Kto
-                    nie przeżył, nie zrozumie. Sowoje życie zawodowe realizuje na całym świecie. Pracujemy od Indii przez Arabię Saudyjską, Egipt, Turcję
+                    Dużo hałasu, ciężkiego sprzętu, ludzi, procesów, instalacji... to właśnie moje środowisko. Ale radość z pierwszego szkła... Kto
+                    nie przeżył, nie zrozumie. Swoje życie zawodowe realizuję na całym świecie. Pracujemy od Indii przez Arabię Saudyjską, Egipt, Turcję
                     aż po kraje zachodniej europy. Mogę pochwalić się współpracą z takimi potęgami jak Saint Gobain, Owens Ilinois, Philips Lightening (obecnie Signify)
                     Stoelzle, czy Isover.
                     Jako typowy "Gaziarz" posiadam szereg uprawnień ( Ciepłownicze, Gazowe, Elektryczne). W ramach rozrywki w pracy czasem pośmigam na wózku widłowym
@@ -120,6 +123,19 @@ const About = () => {
                     Pogrywam też na gitarze (ostanimi czasy również mniej niestety) i Djembe. No i w domu buduję, muruję, spawam, programuje,
                     remontuje. Jak dom to na wsi. Jak na wsi musi być pies. Więc gdy mam wszystkigo dość zgłebiam kynologie i testuję tą
                     wiedzę na moim psie. Jak bym miał czas czytał bym ksiązki. Fantastyczne.
+                </p>
+            </article>
+
+            <article ref={contact}>
+                <h2>Kontakt</h2>
+                <p>
+                    Kontaktować się ze mną można przez:
+                    <ul>
+                        <li>email: pileckidariusz90@gmail.com</li>
+                        <li>telefon: 531587030</li>
+                        <li>linkedin: https://www.linkedin.com/in/dariusz-pilecki-797b7819b</li>
+                    </ul>
+
                 </p>
             </article>
         </div>

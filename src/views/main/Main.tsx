@@ -5,6 +5,7 @@ import Content from '../../components/main/content/Content';
 
 import './Main.scss';
 const Main = () => {
+
     return (
         <div className="Main">
             <Header />

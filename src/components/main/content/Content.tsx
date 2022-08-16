@@ -12,6 +12,9 @@ const Content = () => {
 
     const { article } = useSelector((store: RootState) => store.article);
 
+    const modal1 = article.length < 1 ? null : <Modal article={article[0]} />;
+    const modal2 = article.length > 1 ? <Modal article={article[1]} /> : null;
+
     const navigate = useNavigate();
 
     return (
@@ -22,8 +25,8 @@ const Content = () => {
             </aside>
             <h3>Ostatnie  projekty</h3>
             <div className="Content__modal-space">
-                <Modal article={article[0]} />
-                <Modal article={article[1]} />
+                {modal1}
+                {modal2}
             </div>
         </div>
     );

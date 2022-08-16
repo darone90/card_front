@@ -49,7 +49,7 @@ const Modal = (props: Props) => {
                     {shortText}
                     {foto.length < 1 ? null : <img src={foto} alt="foto" />}
                 </p>
-                <button className="Modal__btn" onClick={navigateToArticle}>Przycisk</button>
+                <button className="Modal__btn" onClick={navigateToArticle}>Zobacz</button>
             </div>
         </div>
     );

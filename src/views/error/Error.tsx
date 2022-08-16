@@ -2,6 +2,8 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Button from '../../components/common/button/Button';
 
+import './Error.scss';
+
 const Error = () => {
 
     const navigate = useNavigate();
@@ -9,9 +11,12 @@ const Error = () => {
     const { message } = useParams();
 
     return (
-        <div className="error">
-            wystąpił błąd: {message}
-            <Button name='Pwrót' className='standard' func={() => navigate(-1)} />
+        <div className="Error">
+            <div className="Error__window">
+                <h1>Oooops! Mamy problem:</h1>
+                <strong>{message}</strong>
+                <Button name='Powrót' className='standard' func={() => navigate(-1)} />
+            </div>          
         </div>
     );
 };

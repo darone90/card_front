@@ -16,7 +16,7 @@ const Header = () => {
             </aside>
             <div className="Header__logo">
                 <strong>techniczny</strong>
-                <strong>pl</strong>
+                <strong>site</strong>
             </div>
             <h1>Każdy problem jest do rozwiązania</h1>
             <div className="Header__gold"></div>

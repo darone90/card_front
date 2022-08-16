@@ -4,6 +4,14 @@
     height: 400px;
     position: relative;
 
+    @media (max-width:768px) {
+        height: 300px;
+    }
+
+    @media (max-width:480px) {
+        height: 200px;
+    }
+
     &__main-image {
         background-image: url('./headfoto.jpeg');
         background-repeat: no-repeat;
@@ -12,6 +20,14 @@
         right: 10%;
         top: 12%;
         position: absolute;
+
+        @media(max-width: 1200px) {
+            width: 35%;
+        }
+
+        @media(max-width: 1024px) {
+            display: none;
+        }
     }
 
     aside {
@@ -22,6 +38,22 @@
         left: 0;
         background-image: linear-gradient(to right, grey, rgb(35, 31, 31));
         z-index: 5;
+
+        @media (max-width: 1200px) {
+            width: 5%;
+        }
+
+        @media (max-width: 768px) {
+            width: 6%;
+        }
+
+        @media (max-width: 560px) {
+            width: 8%;
+        }
+
+        @media (max-width: 480px) {
+            display: none;
+        }
         
             a {
                 position: absolute;
@@ -32,8 +64,20 @@
                 display: block;
                 background-image: url('./github.png');
                 z-index: 20;
-                background-size: cover;
+                background-size: contain;
                 background-repeat: no-repeat;
+                
+                @media (max-width:768px) {
+                    height: 15%;
+                }
+
+                @media (max-width:768px) {
+                    height: 15%;
+                }
+
+                @media (max-width: 560px) {
+                    height: 12%;
+                }
             }
         
             strong {
@@ -45,6 +89,17 @@
                 transform: rotate(-90deg);
                 font-family: Arial, Helvetica, sans-serif;
                 color: rgb(45, 41, 41);
+
+                @media (max-width:768px) {
+                    bottom: 60%;
+                    width: 300%;
+                    left: -100%;
+                }
+
+                @media (max-width:560px) {
+                    bottom: 50%;
+                    width: 280%;                  
+                }
             }
     }
 
@@ -54,6 +109,27 @@
         position: absolute;
         top: 10%;
         left: 15%;
+
+        @media (max-width: 1200px) {
+            top: 15%;
+            left: 10%;
+        }
+
+        @media (max-width: 1024px) {
+            top: 20%;
+            left: 12%;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+            top: 25%;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 6px;
+            top: 35%;
+            left: 8%;
+        }
 
         strong:nth-child(1) {
             text-transform: uppercase;
@@ -85,6 +161,33 @@
         line-height: 60px;
         letter-spacing: 3px;
         text-align: center;
+
+        @media (max-width: 1200px) {
+            font-size: 35px;
+            line-height: 40px;
+            left: 20%;
+            top: 23%;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 30px;
+            width: 40%;
+            line-height: 35px;
+            left: 35%;
+            top: 22%;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 25px;
+            width: 44%;
+            line-height: 30px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 15px;
+            line-height: 20px;
+            top: 20%;
+        }
     }
 
     &__gold {
@@ -96,6 +199,14 @@
         border-top: 5px solid rgb(207, 177, 10);
         border-right: 5px solid rgb(207, 177, 10);
         border-bottom: 5px solid rgb(207, 177, 10);
+
+        @media (max-width: 768px) {
+            left: 10%;
+        }
+
+        @media (max-width: 480px) {
+            left: 0;
+        }
     }
 
     &__white {
@@ -105,16 +216,37 @@
         width: 7%;
         height: 5px;
         background-color: white;
+
+        @media (max-width: 768px) {
+            left: 15%;
+        }
+
+        @media (max-width: 480px) {
+            left: 10%;
+        }
     }
 
     h3 {
         position: absolute;
+        background-color: transparent;
         color: white;
         font-family: 'Arima', Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         bottom: 12%;
         left: 17%;
         background-color: black;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+            left: 26%;
+            bottom: 14%;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 12px;
+            bottom: 10%;
+            left: 18%;
+        }
 
         strong {
             color: rgb(207, 177, 10);
@@ -129,8 +261,32 @@
         font-family: 'Raleway', Arial, Helvetica, sans-serif;
         right: 3%;
 
+        @media (max-width: 1200px) {
+            left: 10%
+        }
+
+        @media (max-width: 1024px) {
+            left: 5%
+        }
+
+        @media (max-width: 480px) {
+            left: 0;
+        }
+
         li {
             margin: 0 10px;
+
+            @media (max-width: 768px) {
+                margin: 0 3px;
+            }
+
+            @media (max-width: 480px) {
+            margin: 0 1px;
+            border: 1px solid white;
+            padding: 0.5px;
+        }
+
+            
         }
 
         a {
@@ -142,6 +298,20 @@
             height: 100%;
             letter-spacing: 2px;
             transition: 0.3s;
+
+            @media (max-width: 1024px) {
+                font-size: 12px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 5px;
+                letter-spacing: 1px;
+            }
 
             &:hover {
                 color: rgb(207, 177, 10);
