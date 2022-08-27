@@ -35,7 +35,7 @@ const Programming = () => {
             </p>
 
             <div className="Programming__projects">
-                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList}
+                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList.reverse()}
             </div>
 
 

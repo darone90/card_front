@@ -17,7 +17,7 @@ const Modal = (props: Props) => {
 
     const { title, text, id, fotos } = props.article;
 
-    const shortText = (text as string).length > 200 ? (text as string).substring(0, 200) : text;
+    const shortText = (text as string).length > 200 ? ((text as string).substring(0, 200)) + '...' : text;
 
     const getFoto = async () => {
         if (!fotos[0]) return;
@@ -46,8 +46,8 @@ const Modal = (props: Props) => {
             <div className="Modal__container">
                 <h1 className='Modal__title'>{title}</h1>
                 <p className='Modal__text'>
-                    {shortText}
                     {foto.length < 1 ? null : <img src={foto} alt="foto" />}
+                    {shortText}
                 </p>
                 <button className="Modal__btn" onClick={navigateToArticle}>Zobacz</button>
             </div>

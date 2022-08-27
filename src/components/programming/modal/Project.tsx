@@ -19,7 +19,7 @@ const Project = (props: Props) => {
         navigate(`/article/${id}`)
     };
 
-    const shortText = (text as string).length > 200 ? (text as string).substring(0, 200) : text;
+    const shortText = (text as string).length > 200 ? (text as string).substring(0, 200) + '...' : text;
 
     const [foto, setFoto] = useState<string>('');
 

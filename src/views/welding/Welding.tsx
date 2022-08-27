@@ -30,7 +30,7 @@ const Welding = () => {
                 spawarki TIG i opanowanie tej metody.
             </p>
             <div className="Welding__projects">
-                {modalList ? modalList : "Brak artykułów w tej kategorii"}
+                {modalList ? modalList.reverse() : "Brak artykułów w tej kategorii"}
             </div>
         </div>
     );

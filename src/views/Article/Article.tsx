@@ -74,10 +74,12 @@ const Article = () => {
         <div className="Article">
             <a onClick={() => navigate(-1)}>Powrót</a>
             <h1>{article.title} <strong>{article.date}</strong></h1>
+            <div className="Article__wrap">
             <p>
                 {article.text}
             </p>
-            {article.fotos.length > 0 ? <Gallery fotos={article.fotos} popupCall={activatePopup} /> : null} 
+                {article.fotos.length > 0 ? <Gallery fotos={article.fotos} popupCall={activatePopup} /> : null}
+            </div>
         </div>
     );
 };

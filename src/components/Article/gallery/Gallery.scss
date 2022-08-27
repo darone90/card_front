@@ -1,32 +1,23 @@
 .Gallery {
     box-sizing: border-box;
     font-size: 1rem;
-    line-height: 1.25;
     background-color: black;
     width: 80%;
     max-width: 60rem;
     display: flex;
+    justify-content: space-between;
 
     @media (min-width: 769px) {
-        box-orient: horizontal;
-        box-direction: normal;
         flex-direction: row;
         flex-wrap: wrap;
-        transform: rotateX(30deg) rotateZ(30deg);
-        perspective: 1000px;
-        width: 30%;
+        width: 40%;
     }
     
 
     &__block {
-        width: 50%;
+        width:45%;
         min-height: 11.25rem;
-        padding: 1rem;
 
-        @media (max-width: 768px) {
-            padding: 0.1rem;
-            
-        }
 
         &-link {
             display: block;

@@ -28,7 +28,7 @@ const GlassPlant = () => {
                 Aby przybliżyć temat przedstawiam moje ostatnie projekty zawodowe.
             </p>
             <div className="Glassplant__projects">
-                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList}
+                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList.reverse()}
             </div>
         </div>
     );

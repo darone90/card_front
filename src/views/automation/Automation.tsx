@@ -28,7 +28,7 @@ const Automation = () => {
                 całą głowę pomysłów jak to wykorzystać. Poniżej przedstawiam kilka swoich koncepcji.
             </p>
             <div className="Automation__projects">
-                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList}   
+                {modalList.length < 1 ? "Brak artykułów w tej kategorii" : modalList.reverse()}   
             </div>
         </div>
     );
