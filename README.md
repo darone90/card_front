@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Welcome to my visit card service
+## Purpose 
+	
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app was written because I want to show some information about me     and my projects. 	Information’s posted by this service are aimed at       recruiters and other people who are interested in technologies witch I use and want to learn. 
 
-## Available Scripts
+## Page map
 
-In the project directory, you can run:
 
-### `npm start`
+```mermaid
+graph LR
+A[Main page] --> B[Programming] --> H[Description and Projects list] --> x[single article]
+A --> C[Automation] --> J[Description and Projects list] --> y[single article]
+A --> D[Welding] --> I[Description and Projects list] --> z[single article]
+A --> E[Glass plant] --> M[Description and Projects list] --> q[single article]
+A --> F[About Me] --> N[Description about me, my plans and projects]
+A --> G[Admin panel] --> L[Login procedure] --> O[Content management]
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Languages
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+At this moment service is available only in my native language: Polish
+Ultimately site will be Polish/English.
 
-### `npm test`
+## Technology stack 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This application was made in React with TypeScript. Global store is operated by Redux and Redux - toolkit.
+Rest of technologies:
+	-  React Router
+	- Sass preprocessor
+	- js file downloader
 
-### `npm run build`
+## App description
+Application was made for sharing information about my hobbies, work, industry experience. Service has admin panel with content management ability. After login procedure admin has the possibility to add new project articles with photos, edit and remove. Also there is an option to download a uploaded photography.  All added articles are visible for visitors in thematical tabs. Also last two added projects are visible on main page. In ,, about me " tab there is some information about my personality, and who am I.  I cordially invite you to read information’s included here. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Back-end part
+Backend is inseparable part of this app. You can find them in my repository https://github.com/darone90/card_back
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## React app develop and production start
 
-### `npm run eject`
+To start app after cloning this repository you need to install node module packages. Also node package manager is required. To install packages use console and tap:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After that to start development server use command: 
+- npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To build static production version:
+- npm run build 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Copyrights
 
-## Learn More
+All code located in this repository is free to use for everyone.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to reach me you can use email: pielckidariusz90@gmail.com
