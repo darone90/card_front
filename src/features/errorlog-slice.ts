@@ -15,7 +15,7 @@ const initialState: Intial = {
 }
 
 export const ErrorSlice = createSlice({
-    name: 'article',
+    name: 'error',
     initialState,
     reducers: {
         loadAll: (state, action: ListLoad) => {

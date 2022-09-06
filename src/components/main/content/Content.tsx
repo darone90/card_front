@@ -12,8 +12,8 @@ const Content = () => {
 
     const { article } = useSelector((store: RootState) => store.article);
 
-    const modal1 = article.length < 1 ? null : <Modal article={article[article.length - 1]} />;
-    const modal2 = article.length > 1 ? <Modal article={article[article.length - 2]} /> : null;
+    const modal1 = article.length < 1 ? null : <Modal article={article[0]}/>;
+    const modal2 = article.length > 1 ? <Modal article={article[1]} /> : null;
 
     const navigate = useNavigate();
 
