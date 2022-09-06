@@ -25,13 +25,18 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        justify-content: space-around;
+
+        article {
+            width: 50%;
+        }
 
         p {
             position: relative;
             color: white;
             line-height: 2;
             letter-spacing: 2px;
-            width: 50%;
+            width: 100%;
             font-family: 'Raleway', Arial, Helvetica, sans-serif;
             text-align: justify;
             margin-left: 5%;

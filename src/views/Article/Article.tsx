@@ -72,7 +72,7 @@ const Article = () => {
 
     
     const textArray = article.text ? article.text.split(/\r?\n|\r|\n/g) : null;
-    const content = textArray ? textArray.map(text => <p><strong></strong>{text}</p>) : null;
+    const content = textArray ? textArray.map((text, index) => <p key={index}><strong></strong>{text}</p>) : null;
 
     return (
         <div className="Article">
