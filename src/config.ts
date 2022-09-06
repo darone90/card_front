@@ -1,3 +1,3 @@
 export const ConnectionsConfig = {
-    backendPath: 'http://localhost:8080',
+    backendPath: 'https://www.techniczny.site/api',
 }

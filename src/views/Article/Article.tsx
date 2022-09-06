@@ -70,14 +70,21 @@ const Article = () => {
     if (loading) return <Spinner />;
     if (popupActie) return <Popup fotoId={currentId} func={disactivatePopup} />
 
+    
+    const textArray = article.text ? article.text.split(/\r?\n|\r|\n/g) : null;
+    const content = textArray ? textArray.map(text => <p><strong></strong>{text}</p>) : null;
+
     return (
         <div className="Article">
             <a onClick={() => navigate(-1)}>Powrót</a>
-            <h1>{article.title} <strong>{article.date}</strong></h1>
+            <div className="Article__head">
+            <h1>{article.title}</h1>
+            <strong>{article.date}</strong>
+            </div>
             <div className="Article__wrap">
-            <p>
-                {article.text}
-            </p>
+            <article>
+            {content}
+            </article>
                 {article.fotos.length > 0 ? <Gallery fotos={article.fotos} popupCall={activatePopup} /> : null}
             </div>
         </div>
