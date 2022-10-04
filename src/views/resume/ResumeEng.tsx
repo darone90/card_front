@@ -32,7 +32,7 @@ const techstack = [{img: html, name: 'HTML5'}, {img: css, name: 'CSS3'}, {img: s
 {img: pm, name: 'PM2'}, {img: webpack, name: 'Webpack'}, {img: websocket, name: 'Websocket'}]
 
 
-const Resume = () => {
+const ResumeEng = () => {
 
     const technologies = techstack.map((tech,index) => <div key={index}><img src={tech.img} alt={tech.name} /><h3>{tech.name}</h3></div>)
 
@@ -53,9 +53,9 @@ const Resume = () => {
                 <div className="Resume__Head-title">
                     <h1>Dariusz Pilecki</h1>
                     <h2>Web Developer</h2>
-                    <p>Cześć! Nazywam się Dariusz i jestem pasjonatem programowania dla którego poznawanie nowych technologii, oraz rozwijanie 
-                        swoich umiejętności jest priorytetem. Mam na koncie kilka indywidualnych projektów wykonanych komercyjnie i aktualnie marzę by stać się częścią 
-                        zgranego zespołu w którym będę mógł rozwinąć skrzydła. 
+                    <p>Hi! My name is Dariusz and I am  I'm passionate about programming for which learning about new technologies, and continuous development of my skills is a priority.
+                       I have made several individual commercial projects and currently  dreaming about becoming a part of a good team
+                       that will let me spread my wings.
                  </p>
                 </div>
             </div>
@@ -74,87 +74,86 @@ const Resume = () => {
                             <p><i className="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dariusz-pilecki-797b7819b/">LinkedIn</a></p>
                         </div>
                         <div className="technologies">
-                            <h2>Technologie</h2>
+                            <h2>Technologies</h2>
                             <div>
                                 {technologies}
                             </div>
                         </div>
                         <div className="education">
-                            <h2>Edukacja</h2>
+                            <h2>Education</h2>
                             <h3>2009 - 2014</h3>
                             <strong>AGH Kraków</strong>
                             <p>
-                                Inżynieria środowiska: specjalizacja OZE
+                            Environmental engineering: specialization RES
                             </p>
-                            <li> <p>tytuł:</p>  Inżynier</li>
-                            
+                            <li> <p>degree:</p>  Bachelor of Engineering</li>                         
                         </div>
 
                         <div className="job">
-                            <h2>Aktualna praca</h2>
-                            <h3>2015 - dziś</h3>
+                            <h2>Current Job</h2>
+                            <h3>2015 - today</h3>
                             <strong>Techglass</strong>
-                            <p>Specjalista ds. techniki cieplnej</p>
+                            <p>Combustion Engineer</p>
                         </div>
                         <div className="clause">
-                            <h2>Klauzula</h2>
-                            <p>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+                            <h2>Clause</h2>
+                            <p>I hereby consent to my personal data being processed for the purpose of considering my application.</p>
                         </div>
                     </section>
                     <section className="Resume__Content-main">
-                            <h2>Projekty</h2>
+                            <h2>Projects</h2>
                             <article>
-                                <h3>Aplikacja Head Hunter</h3>
+                                <h3>Application Head Hunter</h3>
                                 <h4>Stack: React, Nest, TypeScript, TypeORM, mySql</h4>
                                 <p>
-                                    Aplikacja stworzona w ramach praktyk na zakończenie rocznego kursu programowania MegaK.
-                                    Praca w 8 osobowym zespole w metodologii Scrum/Agile, w którym zostałem liderem części back-end. 
+                                Application created as part of the internship at the end of the one-year MegaK programming course.
+                                Working in an 8-person team in the Scrum/Agile methodology, in which I was selected as the leader of the back-end part. 
                         
                                 </p>
-                                <a href="https://github.com/Bartlomiej95/GR12-HeadHunter-backend" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Back-end</a>
-                                <a href="https://github.com/Bartlomiej95/GR12-HeadHunter-frontend" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Front-end</a>
+                                <a href="https://github.com/Bartlomiej95/GR12-HeadHunter-backend" onMouseMove={(e) => buttonEffect(e)}>Back-end Repository</a>
+                                <a href="https://github.com/Bartlomiej95/GR12-HeadHunter-frontend" onMouseMove={(e) => buttonEffect(e)}>Front-end Repository</a>
 
                             </article>
                             <article>
-                                <h3>Aplikacja Tool base</h3>
+                                <h3>Application Tool base</h3>
                                 <h4>Stack: React, Express, TypeScript, TypeORM, mySql, Jest</h4>
                                 <p>
-                                    Program wspomagający zarządzanie narzędziami warsztatu, wykonany komercyjnie. Udało mi się stworzyć płynnie działające
-                                    aplikacje front-end i back-end połączone z bazą danych, posiadające prosty, responsywny interfejs. Back-end napisałem stosując TDD.                 
+                                A commercially made workshop tool management program. I was able to create a smooth running
+                                front-end and back-end applications connected to the database, having a simple, responsive interface. I wrote the back-end using TDD.                 
                                 </p>
-                                <a href="https://github.com/darone90/toolbase-back" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Back-end</a>
-                                <a href="https://github.com/darone90/toolbase-front" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Front-end</a>
+                                <a href="https://github.com/darone90/toolbase-back" onMouseMove={(e) => buttonEffect(e)}>Back-end Repository</a>
+                                <a href="https://github.com/darone90/toolbase-front" onMouseMove={(e) => buttonEffect(e)}>Front-end Repository</a>
                             </article>
                             <article>
-                                <h3>Urządzenie Dry Ager</h3>
+                                <h3>Device Dry Ager</h3>
                                 <h4>Stack: React, Express, Websocket, Python</h4>
                                 <p>
-                                    Sterowanie urządzenia oparte o serwery Websocket oraz Experss.
-                                    Elementy wykonawcze sterowane przez skrypty napisane w Python uruchamiane przez JS jako child process.
-                                    Program steruje chłodzeniem, podgrzewaniem, suszeniem, nawilżaniem oraz wbudowaną kamerą wraz z podświetleniem.
-
+                                    Device control based on the Websocket and Experss servers.
+                                    Controls by scripts written in Python run as JS child process
+                                    The program controls heating, cooling,
+                                    drying, humidifying and a built-in camera with backlight.
                                 </p>
-                                <a href="https://github.com/darone90/dryager" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Back-end</a>
-                                <a href="https://github.com/darone90/dryagerFront/tree/main/src" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Front-end</a>
+                                <a href="https://github.com/darone90/dryager" onMouseMove={(e) => buttonEffect(e)}>Back-end Repository</a>
+                                <a href="https://github.com/darone90/dryagerFront/tree/main/src" onMouseMove={(e) => buttonEffect(e)}>Front-end Repository</a>
                             </article>
                             <article>
-                                <h3>Serwis GSSCH</h3>
+                                <h3>Service GSSCH</h3>
                                 <h4>Stack: Express, JavaScript, MongoDB</h4>
                                 <p>
-                                    Serwis wykonany dla spółdzielni handlowej, posiadający system zarządzania treścią, archiwizacji oraz chmurę na dokumenty. Jest to aplikacja SPA wykonana w czystym JS. Istnieje możliwość 
-                                    dodawania użytkowników o różnym poziomie uprawnień. 
+                                    Website made for a commercial cooperative, with a content management system, archiving and a cloud for documents. This app is a SPA website made in pure JS. It is possible
+                                    adding users with different authorization levels.
                                 </p>
-                                <a href="https://github.com/darone90/gssch-komancza" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu</a>
+                                <a href="https://github.com/darone90/gssch-komancza" onMouseMove={(e) => buttonEffect(e)}>Repository</a>
                             </article>
                             <div className="iteduction">
                                 <div>
-                                    <h2>Kursy IT</h2>
+                                    <h2>IT education</h2>
                                     <section>
                                         <h3>
                                             Vue - The Complete Guide (incl. Router and Composition API)
                                         </h3>
                                         <p>
-                                            30 godzin Stack: <strong>Vue.js</strong> 
+                                            30 hours Stack: <strong>Vue.js</strong> 
                                         </p>
                                         <div className="dot"></div>
                                     </section>
@@ -163,70 +162,70 @@ const Resume = () => {
                                             MegaKurs
                                         </h3>
                                         <p>
-                                            14 miesięcy Stack: <strong>JavaScript ES6+, Node, Express, React, Nest, TypeScript, Jest, mySql, noSql</strong>
+                                            14 months Stack: <strong>JavaScript ES6+, Node, Express, React, Nest, TypeScript, Jest, mySql, noSql</strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            Zaawansowane projekty front-end 
+                                            Advanced front-end projects
                                         </h3>
                                         <p>
-                                            50 godzin Stack: <strong>SASS, GSAP, Canvas, SVG, CSS, Webpack, Bootstrap</strong>
+                                            50 hours Stack: <strong>SASS, GSAP, Canvas, SVG, CSS, Webpack, Bootstrap</strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            Python: Podstawy 
+                                            Python: Basics 
                                         </h3>
                                         <p>
-                                            25 godzin Stack: <strong>Python 3</strong> 
+                                            25 hours Stack: <strong>Python 3</strong> 
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            Podstawy Back-endu w node.js 
+                                            Basics of Back-endu with node.js 
                                         </h3>
                                         <p>
-                                            40 godzin Stack: <strong>Node, Express, Jest </strong>
+                                            40 hours Stack: <strong>Node, Express, Jest </strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            React od podstaw 
+                                            React for begginers 
                                         </h3>
                                         <p>
-                                            60 godzin Stack: <strong>React</strong>
+                                            60 hours Stack: <strong>React</strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            Podstawy programowania JavaScript 
+                                            Basics of programming in JavaScript 
                                         </h3>
                                         <p>
-                                            40 godzin Stack: <strong>JavaScript ES6+</strong>
+                                            40 hours Stack: <strong>JavaScript ES6+</strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            Front-end dla średniozaawansowanych
+                                            Front-end for intermediate
                                         </h3>
                                         <p>
-                                            15 dni Stack: <strong>CSS3, SASS, HTML5, JavaScript</strong>
+                                            15 days Stack: <strong>CSS3, SASS, HTML5, JavaScript</strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
                                     <section>
                                         <h3>
-                                            Web-developer od podstaw
+                                            Web-developer: beginning
                                         </h3>
                                         <p>
-                                            15 dni Stack: <strong>HTML5, CSS3</strong>
+                                            15 days Stack: <strong>HTML5, CSS3</strong>
                                         </p>
                                         <div className="dot"></div>
                                     </section>
@@ -239,4 +238,4 @@ const Resume = () => {
     )
 };
 
-export default Resume;
+export default ResumeEng;

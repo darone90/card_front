@@ -12,7 +12,7 @@ import Login from './views/login/Login';
 import Admin from './views/admin/Admin';
 import Spinner from './components/common/spinner/Spinner';
 import ErrorLog from './views/error/Error'
-import Resume from './views/resume/Resume';
+import ResumeWrap from './views/resume/ResumeWrap';
 
 import './App.scss';
 import { useDispatch } from 'react-redux';
@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-      <Route path='/resume' element={<Resume />} />
+        <Route path='/resume' element={<ResumeWrap />} />
         <Route path='/about' element={<About />} />
         <Route path='/programming' element={<Programming />} />
         <Route path='/automation' element={<Automation />} />
