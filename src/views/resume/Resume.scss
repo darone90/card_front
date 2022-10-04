@@ -1,6 +1,7 @@
 .Resume {
     
     max-width: 1024px;
+    min-width: 320px;
     background-color: rgb(41,41,41);
     margin: 0 auto;
     color: white;
@@ -19,6 +20,10 @@
         &-foto {
             width: 50%;
             margin: 50px;
+
+            @media screen and (max-width: 481px) {
+                margin: 10px;
+            }
             img {
                 width: 100%;
             }
@@ -41,11 +46,24 @@
             @media screen and (max-width: 630px) {
                 width: 100%;
             }
+
+            @media screen and (max-width: 450px) {
+                width: 120%;
+            }
+
+            @media screen and (max-width: 420px) {
+                display: none;
+            }
         }
 
         &-title {
             margin-top: 10px;
             margin-right: 50px;
+
+            @media screen and (max-width: 481px) {
+                margin: 0 auto;
+                padding: 10px;
+            }
             
             h1 {
                 width: 100%;
@@ -55,6 +73,14 @@
 
                 @media screen and (max-width: 670px) {
                     font-size: 1.5rem;
+                }
+
+                @media screen and (max-width: 550px) {
+                    font-size: 1.3rem;
+                }
+
+                @media screen and (max-width: 450px) {
+                    font-size: 1.1rem;
                 }
             }
 
@@ -67,6 +93,14 @@
                 @media screen and (max-width: 670px) {
                     font-size: 1rem;
                 }
+
+                @media screen and (max-width: 550px) {
+                    font-size: 0.8rem;
+                }
+
+                @media screen and (max-width: 450px) {
+                    font-size: 0.6rem;
+                }
             }
 
             p {
@@ -74,6 +108,14 @@
 
                 @media screen and (max-width: 750px) {
                     font-size: 0.8rem;
+                }
+
+                @media screen and (max-width: 600px) {
+                    font-size: 0.7rem;
+                }
+
+                @media screen and (max-width: 500px) {
+                    font-size: 0.6rem;
                 }
             }
         }
@@ -104,8 +146,16 @@
             .contact {
                 margin-bottom: 2.5rem;
 
+                @media screen and (max-width: 481px) {
+                    margin-bottom: 0.5rem;
+                }
+
                 @media screen and (max-width: 670px) {
                     width: 30%;
+                 }
+
+                 @media screen and (max-width: 481px) {
+                    width: 50%;
                  }
                 
                 h2 {
@@ -139,6 +189,22 @@
                     @media screen and (max-width: 670px) {
                         width: 100%;
                     }
+
+                    @media screen and (max-width: 630px) {
+                        font-size: 0.7rem;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        font-size: 0.6rem;
+                    }
+
+                    @media screen and (max-width: 481px) {
+                        font-size: 0.8rem;
+                    }
+
+                    @media screen and (max-width: 380px) {
+                        font-size: 0.6rem;
+                    }
                 }
             }
 
@@ -153,6 +219,11 @@
 
                 @media screen and (max-width: 670px) {
                    width: 40%;
+                }
+
+                @media screen and (max-width: 481px) {
+                   width: 100%;
+                   padding: 5%;
                 }
                 h2 {
                     margin-left: 30px;
@@ -194,8 +265,14 @@
 
                 margin-bottom: 2.5rem;
 
+                @media screen and (max-width: 550px) {
+                    margin-bottom: 1rem;
+                }
+
                 @media screen and (max-width: 670px) {
                     width: 50%;
+                    padding: 5%;
+                    box-sizing: border-box;
                  }
 
                 h2 {
@@ -205,6 +282,10 @@
 
                     @media screen and (max-width: 850px) {
                         font-size: 1.2rem;
+                    }
+
+                    @media screen and (max-width: 380px) {
+                        margin-left: auto;
                     }
                 }
 
@@ -217,10 +298,17 @@
                 strong {
                     letter-spacing: 5px;
                     margin-left: 30px;
+
+                    @media screen and (max-width: 450px) {
+                        font-size: 0.6rem;
+                    }
                 }
 
                 p {
                    margin-left: 10px;
+                   @media screen and (max-width: 420px) {
+                    font-size: 0.8rem;
+                }
                 }
 
                 li {
@@ -287,6 +375,10 @@
                 p {
                     text-align: justify;
                     margin-bottom: 5%;
+
+                    @media screen and (max-width: 380px) {
+                        font-size: 0.8rem;
+                    }
                 }
 
                 a {
@@ -322,6 +414,15 @@
                     @media screen and (max-width: 700px) {
                         font-size: 0.6rem;
                     }
+
+                    @media screen and (max-width: 430px) {
+                        font-size: 0.5rem;
+                    }
+
+                    @media screen and (max-width: 370px) {
+                        font-size: 0.4rem;
+                    }
+
                 }
             }
 
@@ -346,6 +447,9 @@
 
                 h3 {
                     text-align: right;
+                    @media screen and (max-width: 430px) {
+                        font-size: 0.8rem;
+                    }
                 }
 
                 p {

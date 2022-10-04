@@ -84,7 +84,7 @@ const Resume = () => {
                             <h3>2009 - 2014</h3>
                             <strong>AGH Kraków</strong>
                             <p>
-                                Inżynieria środowiska specjalizacja OZE
+                                Inżynieria środowiska: specjalizacja OZE
                             </p>
                             <li> <p>tytuł:</p>  Inżynier</li>
                             
