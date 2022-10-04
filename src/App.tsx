@@ -12,13 +12,14 @@ import Login from './views/login/Login';
 import Admin from './views/admin/Admin';
 import Spinner from './components/common/spinner/Spinner';
 import ErrorLog from './views/error/Error'
-
+import Resume from './views/resume/Resume';
 
 import './App.scss';
 import { useDispatch } from 'react-redux';
 import { getter } from './global/connection';
 import { loadAll } from './features/article-slice';
 import { ArticleListData } from './types/article-types';
+
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
+      <Route path='/resume' element={<Resume />} />
         <Route path='/about' element={<About />} />
         <Route path='/programming' element={<Programming />} />
         <Route path='/automation' element={<Automation />} />

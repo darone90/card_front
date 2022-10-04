@@ -1,0 +1,361 @@
+.Resume {
+    
+    max-width: 1024px;
+    background-color: rgb(41,41,41);
+    margin: 0 auto;
+    color: white;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+
+    &__Head {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        @media screen and (max-width: 670px) {
+            margin-top: 0;
+         }
+
+        &-foto {
+            width: 50%;
+            margin: 50px;
+            img {
+                width: 100%;
+            }
+            @media screen and (max-width: 1024px) {
+                width: 60%;
+            }
+
+            @media screen and (max-width: 900px) {
+                width: 80%;
+            }
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+
+            @media screen and (max-width: 750px) {
+                width: 80%;
+            }
+
+            @media screen and (max-width: 630px) {
+                width: 100%;
+            }
+        }
+
+        &-title {
+            margin-top: 10px;
+            margin-right: 50px;
+            
+            h1 {
+                width: 100%;
+                letter-spacing: 2px;
+                display: block;
+                text-align: center;
+
+                @media screen and (max-width: 670px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            h2 {
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-weight: bold;
+
+                @media screen and (max-width: 670px) {
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                text-align: justify;
+
+                @media screen and (max-width: 750px) {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    &__Content {
+        
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        @media screen and (max-width: 670px) {
+            flex-wrap: wrap;
+        }
+
+        &-info {
+            width: 30%;
+            background-color: rgb(24,22,22);
+
+            @media screen and (max-width: 670px) {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .media,
+            .contact {
+                margin-bottom: 2.5rem;
+
+                @media screen and (max-width: 670px) {
+                    width: 30%;
+                 }
+                
+                h2 {
+                    margin-left: 30px;
+                    margin-bottom: 2.5rem;
+                    letter-spacing: 5px;
+
+                    @media screen and (max-width: 800px) {
+                        font-size: 1.2rem;
+                    }
+                }
+                p {
+                    color: rgb(191,191,191);
+                    margin-left: 10px;
+                    i {
+                        margin-right: 5px;
+                    }
+                    a {
+                        color: rgb(191,191,191);
+                        text-decoration: none;
+                        transition: 0.3s;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+
+                    @media screen and (max-width: 850px) {
+                        font-size: 0.8rem;
+                    }
+
+                    @media screen and (max-width: 670px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .media {
+                p {
+                    @media screen and (max-width: 670px) {
+                        margin-left: 20%;
+                    }
+                }
+            }
+            .technologies {
+
+                @media screen and (max-width: 670px) {
+                   width: 40%;
+                }
+                h2 {
+                    margin-left: 30px;
+                    letter-spacing: 5px;
+                    margin-bottom: 2.5rem;
+
+                    @media screen and (max-width: 850px) {
+                        font-size: 1.2rem;
+                    }
+
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    div{
+                        width: 11%;
+                        padding: 3%;
+                         h3 {
+                            font-size: 60%;
+
+                            @media screen and (max-width: 1000px) {
+                                font-size: 40%;
+                            }
+                         }
+
+                        img {
+                            width: 80%;
+                            height: 45%;
+                        }
+                    }
+                }
+            }
+
+            .education,
+            .job {
+
+                margin-bottom: 2.5rem;
+
+                @media screen and (max-width: 670px) {
+                    width: 50%;
+                 }
+
+                h2 {
+                    margin-left: 30px;
+                    margin-bottom: 2.5rem;
+                    letter-spacing: 5px;
+
+                    @media screen and (max-width: 850px) {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                h3 {
+                    text-align: right;
+                    margin-right: 2rem;
+                    color: rgb(100, 100, 100);
+                }
+
+                strong {
+                    letter-spacing: 5px;
+                    margin-left: 30px;
+                }
+
+                p {
+                   margin-left: 10px;
+                }
+
+                li {
+                    list-style: none;
+                    margin-left: 30px;
+                    
+                    p {
+                        color: rgb(80, 80, 80);
+                    }
+                }
+            }
+
+            .clause {
+
+                @media screen and (max-width: 670px) {
+                    display: none;
+                 }
+                h2 {
+                    margin-left: 30px;
+                    margin-bottom: 1.5rem;
+                    letter-spacing: 5px;
+
+                    @media screen and (max-width: 850px) {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                p {
+                    padding: 20px;
+                    text-align: justify;
+
+                }
+            }
+        }
+
+        &-main {
+            width: 70%;
+            padding: 0 50px;
+            box-sizing: border-box;
+
+
+
+            @media screen and (max-width: 900px) {
+                padding: 0 25px;
+            }
+
+            @media screen and (max-width: 670px) {
+                width: 100%;
+            }
+
+            h2 {
+                letter-spacing: 3px;
+                margin-bottom: 5%;
+
+            }
+
+            article {
+                margin-bottom: 5%;
+                border-bottom: 2px solid rgb(22, 22, 22);
+                padding-bottom: 5%;
+                h4 {
+                    color: rgb(100,100,100);
+                }
+                p {
+                    text-align: justify;
+                    margin-bottom: 5%;
+                }
+
+                a {
+                    font-size: 1rem;
+                    --x: 50%;
+	                --y: 50%;
+                    margin: 5% 5% 0 0;
+                    color: rgb(100,100,100);
+                    text-decoration: none;
+                    border: 2px solid transparent;
+	                background: linear-gradient(rgb(41,41,41), rgb(41,41,41)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
+                    padding: 0.5em 1em;
+                    cursor: pointer;
+                    outline: none;
+                    border-radius: 100px;
+                    transition: 0.3s;
+                    &:hover {
+                        color: white;
+                    }
+
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.9rem;
+                    }
+
+                    @media screen and (max-width: 950px) {
+                        font-size: 0.8rem;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        font-size: 0.7rem;
+                    }
+
+                    @media screen and (max-width: 700px) {
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+
+            .iteduction {
+                section {
+                    border-left: 4px solid white;
+                    box-sizing: border-box;
+                    padding-left: 1rem;
+                    position: relative;
+                }
+
+                .dot {
+                    position: absolute;
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    border-radius: 50%;
+                    background-color: white;
+                    top: 0;
+                    left: 0;
+                    transform: translate(calc(-50% - 2px), -50%);
+                }
+
+                h3 {
+                    text-align: right;
+                }
+
+                p {
+                    color: rgb(100,100,100);
+                    font-size: 0.6rem;
+                    strong {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
