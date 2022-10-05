@@ -53,7 +53,7 @@ const ResumeEng = () => {
                 <div className="Resume__Head-title">
                     <h1>Dariusz Pilecki</h1>
                     <h2>Web Developer</h2>
-                    <p>Hi! My name is Dariusz and I am  I'm passionate about programming for which learning about new technologies, and continuous development of my skills is a priority.
+                    <p>Hi! My name is Dariusz and I'm passionate about programming. I love learning new technologies, and continuous development of my skills is my priority.
                        I have made several individual commercial projects and currently  dreaming about becoming a part of a good team
                        that will let me spread my wings.
                  </p>
@@ -62,7 +62,7 @@ const ResumeEng = () => {
             <div className="Resume__Content">
                     <section className="Resume__Content-info">
                         <div className="contact">
-                            <h2>Kontakt</h2>
+                            <h2>Contact</h2>
                         <p><i className="fa-sharp fa-solid fa-location-dot"></i> Kraków</p>
                         <p><i className="fas fa-envelope"></i> pileckidariusz90@gmail.com</p>
                         <p><i className="fas fa-phone"></i> +48 531 587 030</p>
@@ -134,7 +134,7 @@ const ResumeEng = () => {
                                     drying, humidifying and a built-in camera with backlight.
                                 </p>
                                 <a href="https://github.com/darone90/dryager" onMouseMove={(e) => buttonEffect(e)}>Back-end Repository</a>
-                                <a href="https://github.com/darone90/dryagerFront/tree/main/src" onMouseMove={(e) => buttonEffect(e)}>Front-end Repository</a>
+                                <a href="https://github.com/darone90/dryagerFront/tree/main" onMouseMove={(e) => buttonEffect(e)}>Front-end Repository</a>
                             </article>
                             <article>
                                 <h3>Service GSSCH</h3>

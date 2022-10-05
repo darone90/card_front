@@ -135,7 +135,7 @@ const Resume = () => {
 
                                 </p>
                                 <a href="https://github.com/darone90/dryager" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Back-end</a>
-                                <a href="https://github.com/darone90/dryagerFront/tree/main/src" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Front-end</a>
+                                <a href="https://github.com/darone90/dryagerFront/tree/main" onMouseMove={(e) => buttonEffect(e)}>Repozytorium projektu Front-end</a>
                             </article>
                             <article>
                                 <h3>Serwis GSSCH</h3>

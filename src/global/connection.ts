@@ -64,3 +64,15 @@ export const getFotoForShow = async (path: string): Promise<Response | Error> =>
     };
 }
 
+export const downloadResumeConnection= async (lang: string): Promise<Response | Error> => {
+    try {
+        const request = await fetch(`${ConnectionsConfig.backendPath}/user/downloadCV/${lang}`, {
+            method: "GET",
+            credentials: "include"
+        });
+        return request;
+    } catch (err) {
+        console.log(err);
+        return err as Error;
+    };
+}

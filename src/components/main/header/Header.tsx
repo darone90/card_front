@@ -28,6 +28,7 @@ const Header = () => {
                 <li><a onClick={() => navigate('/automation')}>Automatyka</a></li>
                 <li><a onClick={() => navigate('/welding')}>Spawalnictwo</a></li>
                 <li><a onClick={() => navigate('/glassplant')}>Hutnictwo</a></li>
+                <li><a onClick={() => navigate('/resume')}>CV</a></li>
             </ul>
         </div>
     );
