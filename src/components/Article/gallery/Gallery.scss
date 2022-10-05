@@ -5,6 +5,7 @@
     width: 50%;
     max-width: 60rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
     @media (min-width: 769px) {
