@@ -5,6 +5,7 @@ import { getter, sendData } from '../../../global/connection';
 import { RootState } from '../../../store';
 import { ConnectionType } from '../../../types/user-types';
 
+import Visitors from './parts/Visitors';
 import Button from '../../common/button/Button';
 import Spinner from '../../common/spinner/Spinner';
 import ErrLog from './parts/ErrLog';
@@ -132,6 +133,9 @@ const User = () => {
                     {errorsToShow}
                 </div>
                 <Button name='wyczyść' className='standard' func={clearErrorLog} />
+            </div>
+            <div className="User__visitors">
+                <Visitors/>
             </div>
         </div>
     );

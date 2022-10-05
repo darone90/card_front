@@ -32,14 +32,14 @@ const ResumeWrap = () => {
             navigate(`/error/${response.message}`)
         } else {
             const blob = await response.blob();
-            fileDownload(blob, `Dariusz Pilecki CV ${languange}`);
+            fileDownload(blob, `Dariusz Pilecki CV ${languange}.pdf`);
         };
     }
 
     return (
         <div className="ResumePage">
             <button onClick={changeLanguange}>{languange === "PL" ? "Wersja ENG" : "Version PL"}</button>
-            <button>{languange === "PL" ? "Pobierz PDF" : "Download PDF"}</button>
+            <button onClick={downloadResume}>{languange === "PL" ? "Pobierz PDF" : "Download PDF"}</button>
             <button onClick={() => navigate('/')}>{languange === "PL" ? "Powrót" : "Go back"}</button>
 
             {languange === 'PL' ? <Resume/> : <ResumeEng/>}
